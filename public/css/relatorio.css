@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@page {
+    margin: 0cm 0cm;
+}
+
+.clear{
+    clear: both;
+}
+
+/** Define now the real margins of every page in the PDF **/
+body {
+    margin-top: 3cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
+    padding-top: 20px;
+}
+
+h1{
+    border:2px solid #A24E44;
+    color:#A24E44;
+    border-radius: 10px;
+    padding: 3px 0;
+    font-size: 16px;
+    font-weight:normal;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/** Define the header rules **/
+header {
+    position: fixed;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 3cm;
+
+    /** Extra personal styles **/
+    
+    
+    color: white;
+    text-align: center;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+}
+
+header .logo-saude{
+    margin-top: 12px;
+    height: 100px;
+    max-height: 100%;
+    float: left;
+}
+
+header .logo-prefeitura{
+    height: 100%;
+    float: right;
+}
+
+/** Define the footer rules **/
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 2cm;
+    right: 2cm;
+    height: 2cm;
+
+    /** Extra personal styles **/
+    
+    /*border-top: 2px solid #ccc;*/
+    color: black;
+    text-align: center;
+    line-height: 0.7cm;
+    color: #6c757d;
+    margin-top: 0px;
+}
+
+table{
+    margin:10px auto;
+    width: 100%;
+}
+
+table th{
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 2px solid #6c757d;
+    color: #6c757d;
+    text-align: left;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    
+}
+
+table tr td{
+    padding: 5px 5px;
+    font-size: 15px;
+}
+
+h3{
+    background-color: #28302a; 
+    color: white; 
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.total{
+    font-size: 15px;
+    color: #6c757d;
+}
+
+h2{
+    margin-top: 40px;
+}
+
+.credenciais{
+    font-size: 15px;
+    color: #6c757d;
+}
+
+.manutencao{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6c757d;
+    margin:20px 0px;
+}
+

@@ -1,0 +1,9 @@
+
+.bg-teal i{
+    color: white !important;
+}
+
+.active{
+    background-color: azure !important;
+    color: black !important;
+}
