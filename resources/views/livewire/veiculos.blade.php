@@ -428,9 +428,15 @@
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header text-center"></div>
+                <div class="modal-header text-center">
+                    @if (session()->has('mensagem-error'))
+                        <div wire:poll.7000ms class="text-center col-md-12 text-danger">
+                            {{ session('mensagem-error') }}
+                        </div>
+                    @endif
+                </div>
                 <div class="modal-body">
-                    Deseja realmente excluir esse usuário?
+                    Deseja realmente excluir esse registro?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Fechar</button>

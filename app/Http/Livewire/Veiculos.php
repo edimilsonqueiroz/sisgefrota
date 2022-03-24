@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use App\Models\Veiculo;
+use App\Models\VeiculoRevisao;
 
 class Veiculos extends Component
 {
@@ -189,13 +190,19 @@ class Veiculos extends Component
 
     public function destroy(){
         $veiculo = Veiculo::find($this->veiculoId);
-        
-        $imagemVeiculo = explode('/', $veiculo->imagem) ;
-        unlink(storage_path('app/public/imagens/'.$imagemVeiculo[1]));
-        Veiculo::destroy($this->veiculoId);
-    
-        $this->dispatchBrowserEvent('close-modal-delete');
-        session()->flash('mensagem-sucesso', 'Veículo apagado com sucesso.');
+        $veiculoRevisao = VeiculoRevisao::where('veiculo_id', $this->veiculoId)->first();
+
+        if(!$veiculoRevisao){
+            $imagemVeiculo = explode('/', $veiculo->imagem) ;
+            unlink(storage_path('app/public/imagens/'.$imagemVeiculo[1]));
+            Veiculo::destroy($this->veiculoId);
+
+            $this->dispatchBrowserEvent('close-modal-delete');
+            session()->flash('mensagem-sucesso', 'Veículo apagado com sucesso.');
+
+        }else{
+            session()->flash('mensagem-error', 'Veículo possui mautenções/revisões vinculada a ele voçe previsa remover primeiro as manutençoes/revisões.');
+        }
     
     }
 
