@@ -23,4 +23,8 @@ class Maquina extends Model
         'status',
         'imagem'
     ];
+
+    public function manutencoes(){
+        return $this->hasMany(MaquinaRevisao::class, 'maquina_id','id');
+    }
 }
