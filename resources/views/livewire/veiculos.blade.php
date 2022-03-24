@@ -428,9 +428,7 @@
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header text-center">
-
-                </div>
+                <div class="modal-header text-center"></div>
                 <div class="modal-body">
                     Deseja realmente excluir esse usuário?
                 </div>
